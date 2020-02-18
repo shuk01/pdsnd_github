@@ -263,7 +263,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# Create function main() that uses other function if this is the main shell
 def main():
     while True:
         city, month, day = get_filters()
@@ -271,12 +271,16 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
+        print('Moving to Station Stats')
         station_stats(df)
+        print('Moving to trip duration stats')
         trip_duration_stats(df)
+        print('Moving to user stats')
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
+            print('Thanks for using this bikeshare data explorer!')
             break
 
 #
