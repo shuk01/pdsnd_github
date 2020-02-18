@@ -1,15 +1,17 @@
-### Date created
-Include the date you created this project and README file.
+### 18th Feb 2020
 
-### Project Title
+
+### Interactive Bikeshare Analysis
 Replace the Project Title
 
 ### Description
-Describe what your project is about and what it does
+This project helps users explore bikeshare data from Washington, Chicago and New York City in an interactive way.
 
-### Files used
-Include the files used
+### Files Used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Udacity's Python Course
