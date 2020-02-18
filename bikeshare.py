@@ -2,6 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 
+# CITY_DATA provided by Udacity course on python. There is additional data on users for both Chicago and New York City.
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -17,19 +19,19 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!\nFirst, let\'s set some parameters by which we will filter the data with. All data displayed will depend on these parameters')
 
-    # Gets user input for city (chicago, new york city, washington)
+    # Get user input for city (chicago, new york city, washington)
     city = str(input('Type in chicago, new york city, or washington: ').lower().strip())
     while city != 'chicago' and city != 'new york city' and city != 'washington':
         print('Not a valid city. Please try again')
         city = str(input('Type in the city of your interest, chicago, new york city, or washington:').lower().strip())
 
-    # Gets user input for month (all, january, february, ... , june)
+    # Get user input for month (all, january, february, ... , june)
     month = str(input('Type in the month you want to filter by, from january to june, or all: ').lower().strip())
     while month != 'all' and month != 'january' and month != 'february' and month != 'march' and month != 'april' and month != 'may' and month != 'june':
         print('Not a valid month. Please try again')
         month = str(input('Type in the month you want to filter by, from january to june, or all: ').lower().strip())
 
-    # Gets user input for day of week (all, monday, tuesday, ... sunday)
+    # Get user input for day of week (all, monday, tuesday, ... sunday)
     day = str(input('Type in the day you want to filter by, from monday to sunday, or all: ').lower().strip())
     while day != 'all' and day != 'monday' and day != 'tuesday' and day != 'wednesday' and day != 'thursday' and day != 'friday' and day != 'saturday' and day != 'sunday':
         print('Not a valid day. Please try again')
